@@ -36,6 +36,6 @@
 - **`config/metadata.json`** — параметры модели и эксперимента.
 - **`baseline/results_baseline.pkl`** — агрегированные результаты базовой модели.
 - **`baseline/baseline_test_*.pkl`** — данные отдельных тестовых эпизодов базовой модели.
-- **`steering/steering_train_act_*.pkl`** — активации обучающих эпизодов для построения операторов steering.
+- **`steering/steering_train_act_*.pkl`** — данные обучающих эпизодов, включая наблюдения, действия, coverage и метки успешности.
 - **`steering/results_mean_steering.pkl`** — результаты метода Difference-in-Means.
 - **`steering/results_coast.pkl`** — результаты метода COAST.
