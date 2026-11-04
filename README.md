@@ -1,14 +1,13 @@
-# test
 # COAST Steering on PushT
 
-This repository contains the implementation and experimental results of activation steering methods applied to a pretrained state-based Diffusion Policy on the PushT benchmark.
+Репозиторий содержит реализацию и результаты экспериментов по применению activation steering к предобученной state-based Diffusion Policy в среде PushT.
 
-The project compares two steering approaches:
+В работе сравниваются два метода:
 
-- **Difference-in-Means (DiM)** — steering using the difference between mean activations of successful and failed episodes.
-- **COAST-style steering** — steering based on contrastive conceptors estimated from activation covariance matrices.
+- **Difference-in-Means (DiM)** — вмешательство на основе разности средних активаций успешных и неуспешных эпизодов.
+- **COAST-style steering** — вмешательство на основе контрастивных концепторов, построенных по ковариационным матрицам активаций.
 
-## Repository Structure
+## Структура проекта
 
 ```text
 .
@@ -27,12 +26,16 @@ The project compares two steering approaches:
     ├── steering_train_act_*.pkl
     ├── results_mean_steering.pkl
     └── results_coast.pkl
-```
-# Project Structure
 
-- **`COAST_PushT.ipynb`** — main notebook with experimental code.
-- **`Report_COAST_PushT.pdf`** — research report with methodology and results.
-- **`config/metadata.json`** — experiment configuration and metadata.
-- **`baseline/`** — baseline evaluation results and test episode data.
-- **`steering/`** — training activations and evaluation results for DiM and COAST methods.
-- **`README.md`** — project overview and file descriptions.
+```
+
+## Описание файлов
+
+- **`COAST_PushT.ipynb`** — основной ноутбук с реализацией экспериментов.
+- **`Report_COAST_PushT.pdf`** — отчёт с методологией и результатами.
+- **`config/metadata.json`** — параметры модели и эксперимента.
+- **`baseline/results_baseline.pkl`** — агрегированные результаты базовой модели.
+- **`baseline/baseline_test_*.pkl`** — данные отдельных тестовых эпизодов базовой модели.
+- **`steering/steering_train_act_*.pkl`** — активации обучающих эпизодов для построения операторов steering.
+- **`steering/results_mean_steering.pkl`** — результаты метода Difference-in-Means.
+- **`steering/results_coast.pkl`** — результаты метода COAST.
