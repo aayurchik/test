@@ -1,0 +1,22 @@
+{
+    "device": "cuda",
+    "torch_version": "1.13.1+cu117",
+    "numpy_version": "1.24.4",
+    "diffusers_version": "0.18.2",
+    "obs_horizon": 2,
+    "pred_horizon": 16,
+    "action_horizon": 8,
+    "num_diffusion_iters": 100,
+    "max_steps": 200,
+    "success_threshold": 0.95,
+    "activation_layers": [
+        "down1",
+        "mid",
+        "up0",
+        "up1"
+    ],
+    "activation_dtype": "float16",
+    "activation_storage": "separate_npz_per_episode",
+    "activation_pooling": null,
+    "denoise_order": "99->0"
+}
